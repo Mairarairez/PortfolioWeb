@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,6 +15,10 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { DeslizarComponent } from './components/deslizar/deslizar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+;
+
 
 @NgModule({
   declarations: [
@@ -27,13 +32,16 @@ import {HttpClientModule} from '@angular/common/http';
     ProyectoComponent,
     DeslizarComponent,
     FooterComponent,
+    HomeComponent,
+    LoginComponent,
      ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
-  ],
+    HttpClientModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
